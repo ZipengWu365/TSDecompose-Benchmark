@@ -1,0 +1,7 @@
+method,band_plausibility,resampling_stability,spectral_overlap
+SSA,0.967,0.651,0.950
+MSTL,0.918,0.652,0.951
+STL,0.910,0.639,0.947
+VMD,0.792,0.570,0.882
+CEEMDAN,0.782,0.557,0.903
+Wavelet,0.172,0.666,0.924

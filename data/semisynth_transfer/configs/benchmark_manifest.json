@@ -1,0 +1,99 @@
+{
+  "experiment_name": "experiments_20260406_semisynth_22methods_aligned",
+  "suite_name": "semi_synthetic_companion_track",
+  "headline_claim": "22-method semi-synthetic companion track aligned to the paper-aligned 22-method synthetic benchmark",
+  "scenario_ids": [
+    "single_annual_cycle",
+    "annual_semiannual_multi_harmonic",
+    "drifting_annual_cycle"
+  ],
+  "datasets": [
+    "ch4",
+    "ndvi",
+    "gpcc_precip",
+    "sea_ice_arctic",
+    "sunspots",
+    "qbo"
+  ],
+  "background_scales": [
+    0.5,
+    1.0
+  ],
+  "windows_per_setting": 8,
+  "n_draws": 8,
+  "length": 480,
+  "dt": 1.0,
+  "fs": 1.0,
+  "seed_list": [
+    0
+  ],
+  "metric_panels": {
+    "paper_5metric": [
+      "metric_T_r2",
+      "metric_T_dtw",
+      "metric_S_r2",
+      "metric_S_spectral_corr",
+      "metric_S_maxlag_corr"
+    ],
+    "audit_12metric": [
+      "metric_T_r2",
+      "metric_T_dtw",
+      "metric_T_pearson_r",
+      "metric_T_ccc",
+      "metric_T_first_diff_pearson",
+      "metric_T_directional_accuracy",
+      "metric_S_r2",
+      "metric_S_spectral_corr",
+      "metric_S_maxlag_corr",
+      "metric_S_best_lag_pearson",
+      "metric_S_spectral_cosine_similarity",
+      "metric_S_spectral_js_similarity"
+    ]
+  },
+  "backend_policy": {
+    "selection_rule": "semi_synthetic_parity_gated_detime",
+    "parity_dataset": "ch4",
+    "parity_background_scale": 1.0,
+    "parity_sample_draw_ids": [
+      0,
+      1
+    ],
+    "parity_max_mean_abs_metric_delta": 0.02,
+    "parity_max_mean_rank_delta": 1.0
+  },
+  "scenarios": [
+    {
+      "scenario_id": "single_annual_cycle",
+      "tier": 1,
+      "periods": [
+        12
+      ],
+      "mechanism": "single_annual_cycle"
+    },
+    {
+      "scenario_id": "annual_semiannual_multi_harmonic",
+      "tier": 2,
+      "periods": [
+        12,
+        6
+      ],
+      "mechanism": "annual_semiannual_multi_harmonic"
+    },
+    {
+      "scenario_id": "drifting_annual_cycle",
+      "tier": 3,
+      "periods": [
+        12
+      ],
+      "mechanism": "drifting_annual_cycle"
+    }
+  ],
+  "synthetic_anchor": {
+    "experiment_dir": "experiments_20260406_full_benchmark_22methods_detime",
+    "mechanism_to_scenario": {
+      "single_annual_cycle": "trend_plus_single_sine",
+      "annual_semiannual_multi_harmonic": "poly_trend_multi_harmonic",
+      "drifting_annual_cycle": "rw_trend_freq_drifting_cycle"
+    }
+  }
+}

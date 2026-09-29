@@ -1,0 +1,31 @@
+dataset_id,status,source_data_url,local_seed_path,download_status,local_artifact_path,bytes,sha256,downloaded_at,error
+mauna_loa_co2,ready_core,https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+global_ch4,ready_core,https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+qbo_30mb,ready_core,https://www.cpc.ncep.noaa.gov/data/indices/qbo.u30.index,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+arctic_sea_ice_extent,ready_core,https://noaadata.apps.nsidc.org/NOAA/G02135/north/monthly/data/,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+antarctic_sea_ice_extent,ready_core,https://noaadata.apps.nsidc.org/NOAA/G02135/south/monthly/data/,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+global_ndvi,ready_core,,experiments_20260406_semisynth_22methods_aligned/data/track_c/ndvi.csv,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+sunspots_monthly,ready_core,https://www.sidc.be/SILSO/DATA/SN_m_tot_V2.0.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+nino34_sst_anom,ready_core,https://psl.noaa.gov/data/timeseries/month/data/nino34.long.anom.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+soi_monthly,ready_core,https://psl.noaa.gov/data/timeseries/month/data/soi.long.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+pdo_index,ready_exploratory,https://psl.noaa.gov/pdo/data/pdo.timeseries.sstens.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+ao_index,ready_exploratory,https://psl.noaa.gov/data/timeseries/month/data/ao.long.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+nao_index,ready_exploratory,https://psl.noaa.gov/data/timeseries/month/data/nao.long.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+global_mean_sea_level,ready_core,https://psl.noaa.gov/data/timeseries/month/data/sealevel.podaac.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+sf_tide_hourly,ready_core,,physics_validation/data/raw/tides_9414290_20230101_20230201.csv,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+ny_tide_hourly,candidate_api,https://api.tidesandcurrents.noaa.gov/api/prod/datagetter,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+honolulu_tide_hourly,candidate_api,https://api.tidesandcurrents.noaa.gov/api/prod/datagetter,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+amo_index,candidate_direct_txt,https://www.psl.noaa.gov/data/correlation/amon.us.long.data,,error,,,,2026-04-08T19:25:50Z,network blocked in current environment
+iod_dmi_hadisst,candidate_direct_csv,https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.csv,,error,,,,2026-04-08T19:25:50Z,network blocked in current environment
+usgs_colorado_streamflow,candidate_direct_json,https://waterservices.usgs.gov/nwis/dv/?format=json&sites=09163500&startDT=1980-01-01&parameterCd=00060&siteStatus=all,,error,,,,2026-04-08T19:25:50Z,network blocked in current environment
+iers_length_of_day,candidate_manual,,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+solar_flux_f107,ready_exploratory,https://psl.noaa.gov/data/correlation/solar.data,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+total_solar_irradiance,candidate_netcdf,https://www.ncei.noaa.gov/thredds/catalog/cdr-total-solar-irradiance/monthly/catalog.html,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+nh_snow_cover_extent,ready_exploratory,https://climate.rutgers.edu/snowcover/files/moncov.nhland.txt,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+eurasia_snow_cover_extent,candidate_direct_txt,https://climate.rutgers.edu/snowcover/files/moncov.eurasia.txt,,cached_existing,C:\Users\wzp07\OneDrive\文档\data library\icml-TS-decomposition-benchmarks\experiments_20260406_real_datasets_hourly_22methods\data\candidate_downloads\eurasia_snow_cover_extent\source.txt,12964,9d6e2a2d07700d25703ba68ad60a5caedc5cd965f5e765c3ae080f13ce6bddce,2026-04-08T19:25:50Z,
+north_america_snow_cover_extent,candidate_direct_txt,https://climate.rutgers.edu/snowcover/files/moncov.namgnld.txt,,cached_existing,C:\Users\wzp07\OneDrive\文档\data library\icml-TS-decomposition-benchmarks\experiments_20260406_real_datasets_hourly_22methods\data\candidate_downloads\north_america_snow_cover_extent\source.txt,13024,7cca2f2fcebbe2e0173afcaf46757b5e06d560fddf607d064bc66637c00605d2,2026-04-08T19:25:50Z,
+upper_colorado_basin_precip,ready_exploratory,https://psl.noaa.gov/data/timeseries/month/data/upperCOP.mon.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+upper_colorado_basin_temp,ready_exploratory,https://psl.noaa.gov/data/timeseries/month/data/upperCOT.mon.csv,,skipped_non_direct_status,,,,2026-04-08T19:25:50Z,
+mjo_rmm_amplitude,candidate_direct_txt,https://www.bom.gov.au/clim_data/IDCKGEM000/rmm.74toRealtime.txt,,error,,,,2026-04-08T19:25:50Z,network blocked in current environment
+central_england_temperature,candidate_direct_txt,https://www.metoffice.gov.uk/hadobs/hadcet/data/meantemp_monthly_totals.txt,,error,,,,2026-04-08T19:25:50Z,network blocked in current environment
+england_wales_precipitation,candidate_direct_txt,https://www.metoffice.gov.uk/hadobs/hadukp/data/monthly/HadEWP_monthly_totals.txt,,error,,,,2026-04-08T19:25:50Z,network blocked in current environment

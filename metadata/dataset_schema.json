@@ -1,0 +1,67 @@
+{
+  "artifact_type": "repository-style Hugging Face dataset release",
+  "primary_tables": {
+    "paper_tables": {
+      "path": "data/paper_tables",
+      "description": "Exact CSV versions of the camera-ready main-text and appendix tables.",
+      "paper_core_raw": "data/paper_tables/paper_core_50draw_leaderboard.csv",
+      "paper_core_by_tier": "data/paper_tables/paper_core_50draw_by_tier.csv",
+      "table2_display": "data/paper_tables/global_performance_summary.csv",
+      "table_provenance": "metadata/paper_table_provenance.md",
+      "table2_aggregation": "Tier-balanced over valid metric values: stationary columns are the equal-weight average of Tier 1 and Tier 2 means; non-stationary columns are Tier 3 means. Seasonal metrics are undefined for the trend-only scenario, so metric-specific valid-row counts are provided.",
+      "recommended_for_citation_checks": true
+    },
+    "paper_figures": {
+      "path": "data/paper_figures",
+      "description": "Selected camera-ready figure assets used by the leaderboard Space to keep the web view aligned with the paper."
+    },
+    "synthetic_full22_extension": {
+      "raw": "data/synthetic_full22_extension/results/merged/leaderboard_full22_raw.csv",
+      "summary_dir": "data/synthetic_full22_extension/results/summary",
+      "description": "Benchmark-only 6-scenario, 50-draw synthetic extension with a 22-method roster."
+    },
+    "real_proxy22": {
+      "raw": "data/real_proxy22/results/summary/latest_round_raw_proxy_metrics.csv",
+      "summary_dir": "data/real_proxy22/results/summary",
+      "description": "Real-data proxy diagnostics, not exact component-recovery labels."
+    },
+    "semisynth_transfer": {
+      "raw": "data/semisynth_transfer/results/merged/semisynth22_raw.csv",
+      "summary_dir": "data/semisynth_transfer/results/summary",
+      "description": "Benchmark-only 22-method semi-synthetic transfer results over real monthly backgrounds; ranking_paper_5metric_overall.csv is the extension ranking source and large downloaded source archives are excluded."
+    },
+    "post_rebuttal_second_expansion": {
+      "real_physics_track_b": "data/post_rebuttal_second_expansion/real_physics_track_b",
+      "real_proxy_track_c": "data/post_rebuttal_second_expansion/real_proxy_track_c",
+      "description": "Post-rebuttal second expansion containing mechanism-aware real-data checks and a six-dataset real proxy/stability panel."
+    },
+    "site_data": {
+      "path": "site_data/v1.0.0",
+      "metric_definitions": "site_data/v1.0.0/evaluation_metrics.json",
+      "description": "Lightweight leaderboard data files regenerated from the current paper-aligned outputs."
+    }
+  },
+  "source_snapshot": {
+    "path": "code/TSDecompose/src",
+    "import_name": "tsdecomp",
+    "package_path": "code/TSDecompose/src/tsdecomp",
+    "paper_benchmark_entrypoint": "code/TSDecompose/scripts/run_paper_benchmark.py",
+    "paper_benchmark_default": {
+      "suite": "core",
+      "scenarios": 6,
+      "draws_per_scenario": 50,
+      "generated_series": 300,
+      "length": 512,
+      "dt": 1.0,
+      "methods": [
+        "ma_baseline",
+        "stl",
+        "ssa",
+        "emd",
+        "vmd",
+        "wavelet"
+      ]
+    },
+    "packaging_note": "Included for repository inspection and local benchmark execution, not published as a PyPI package release."
+  }
+}

@@ -1,0 +1,3 @@
+setting,aggregate_order_best_to_worst
+Default,SSA > CEEMDAN > MA > STL > Wavelet > VMD
+Tuned,SSA > CEEMDAN > MA > VMD > STL > Wavelet

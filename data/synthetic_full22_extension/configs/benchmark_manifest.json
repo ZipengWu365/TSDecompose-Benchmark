@@ -1,0 +1,173 @@
+{
+  "experiment_name": "experiments_20260406_full_benchmark_22methods_detime",
+  "protocol_name": "paper_aligned_full_benchmark_22methods_detime",
+  "suite_name": "core",
+  "suite_version": "paper-aligned-v1",
+  "headline_claim": "paper-aligned benchmark protocol with an additional 12-metric audit panel",
+  "paper_alignment": {
+    "scenario_set": "same_as_paper",
+    "draws_per_scenario": "same_as_paper",
+    "series_length": "same_as_paper",
+    "dt": "same_as_paper",
+    "period_injection": "same_as_paper",
+    "aggregation_levels": "same_as_paper",
+    "default_config_without_search": "same_as_paper",
+    "paper_5metric_panel": "retained",
+    "audit_12metric_panel": "extension",
+    "method_roster_22": "extension"
+  },
+  "length": 512,
+  "dt": 1.0,
+  "fs": 1.0,
+  "n_draws": 50,
+  "seed_list": [
+    0
+  ],
+  "scenario_ids": [
+    "trend_only_linear",
+    "trend_plus_single_sine",
+    "poly_trend_multi_harmonic",
+    "logistic_trend_multi_seasonal",
+    "rw_trend_freq_drifting_cycle",
+    "piecewise_trend_regime_cycle_with_events"
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "trend_only_linear",
+      "tier": 1,
+      "periods": [
+        50
+      ],
+      "mechanism": "pure linear trend"
+    },
+    {
+      "scenario_id": "trend_plus_single_sine",
+      "tier": 1,
+      "periods": [
+        50
+      ],
+      "mechanism": "quadratic trend plus single seasonal sine"
+    },
+    {
+      "scenario_id": "poly_trend_multi_harmonic",
+      "tier": 2,
+      "periods": [
+        48
+      ],
+      "mechanism": "polynomial trend plus multi-harmonic seasonality"
+    },
+    {
+      "scenario_id": "logistic_trend_multi_seasonal",
+      "tier": 2,
+      "periods": [
+        24,
+        168
+      ],
+      "mechanism": "logistic trend plus dual seasonal structure"
+    },
+    {
+      "scenario_id": "rw_trend_freq_drifting_cycle",
+      "tier": 3,
+      "periods": [
+        50
+      ],
+      "mechanism": "smooth random-walk trend plus drifting-frequency cycle"
+    },
+    {
+      "scenario_id": "piecewise_trend_regime_cycle_with_events",
+      "tier": 3,
+      "periods": [
+        40,
+        65
+      ],
+      "mechanism": "piecewise trend plus regime cycle plus event perturbations"
+    }
+  ],
+  "metric_panels": {
+    "paper_5metric": [
+      "metric_T_r2",
+      "metric_T_dtw",
+      "metric_S_r2",
+      "metric_S_spectral_corr",
+      "metric_S_maxlag_corr"
+    ],
+    "audit_12metric": [
+      "metric_T_r2",
+      "metric_T_dtw",
+      "metric_T_pearson_r",
+      "metric_T_ccc",
+      "metric_T_first_diff_pearson",
+      "metric_T_directional_accuracy",
+      "metric_S_r2",
+      "metric_S_spectral_corr",
+      "metric_S_maxlag_corr",
+      "metric_S_best_lag_pearson",
+      "metric_S_spectral_cosine_similarity",
+      "metric_S_spectral_js_similarity"
+    ],
+    "auxiliary_diagnostics": [
+      "metric_S_topk_freq_hit_rate"
+    ]
+  },
+  "backend_policy": {
+    "preferred_backend": "detime",
+    "fallback_backend": "current",
+    "classical_detime_candidates": [
+      "ssa",
+      "ceemdan",
+      "stl",
+      "vmd",
+      "wavelet"
+    ],
+    "current_only_methods": [
+      "ma_baseline",
+      "autoformer_block",
+      "dlinear_block",
+      "moving_average_decomposition_block",
+      "nbeats_interpretable",
+      "xpatch_block",
+      "leddam_block",
+      "inparformer_block",
+      "delelstm_block",
+      "parsimony_block",
+      "amd_block",
+      "times2d_block",
+      "st_mtm_block",
+      "waveform_block",
+      "waveletmixer_block",
+      "freqmoe_block",
+      "timekan_block"
+    ],
+    "parity_sample_draw_ids": [
+      0,
+      1
+    ],
+    "parity_metric_panel": "paper_5metric",
+    "parity_max_mean_abs_metric_delta": 0.02,
+    "parity_max_mean_rank_delta": 1.0
+  },
+  "output_contract": {
+    "raw_file": "results/merged/leaderboard_full22_raw.csv",
+    "summary_files": [
+      "results/summary/paper_5metric_by_scenario.csv",
+      "results/summary/paper_5metric_by_tier.csv",
+      "results/summary/paper_5metric_overall.csv",
+      "results/summary/audit_12metric_by_scenario.csv",
+      "results/summary/audit_12metric_by_tier.csv",
+      "results/summary/audit_12metric_overall.csv",
+      "results/summary/coverage_by_method.csv",
+      "results/summary/protocol_matrix.md",
+      "results/summary/report.md"
+    ],
+    "ranking_files": [
+      "results/summary/ranking_paper_5metric_raw.csv",
+      "results/summary/ranking_paper_5metric_scenarios.csv",
+      "results/summary/ranking_paper_5metric_tiers.csv",
+      "results/summary/ranking_paper_5metric_overall.csv",
+      "results/summary/ranking_audit_12metric_raw.csv",
+      "results/summary/ranking_audit_12metric_scenarios.csv",
+      "results/summary/ranking_audit_12metric_tiers.csv",
+      "results/summary/ranking_audit_12metric_overall.csv"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+method,setting,trend_r2,seasonal_spectral_corr,seasonal_maxlag_corr
+STL,True,0.954,0.913,0.889
+STL,FFT,0.884,0.823,0.798
+STL,+20%,0.928,0.512,0.405
+MSTL,True,0.987,0.958,0.913
+MSTL,FFT,0.886,0.815,0.790
+MSTL,+20%,0.940,0.467,0.338

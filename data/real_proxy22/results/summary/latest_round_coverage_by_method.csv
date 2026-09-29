@@ -1,0 +1,23 @@
+method,display_name,family,total_rows,ok_rows,error_rows,coverage_success,backends_seen
+amd_block,AMD block,neural_decomposition,14,14,0,1.0,current
+autoformer_block,Autoformer block,neural_ma_family,14,14,0,1.0,current
+ceemdan,CEEMDAN,classical,14,14,0,1.0,current
+delelstm_block,DeLELSTM block,neural_decomposition,14,14,0,1.0,current
+dlinear_block,DLinear block,neural_ma_family,14,14,0,1.0,current
+freqmoe_block,FreqMoE block,neural_wavelet_frequency,14,14,0,1.0,current
+inparformer_block,InParformer block,neural_decomposition,14,14,0,1.0,current
+leddam_block,LEDDAM block,neural_decomposition,14,14,0,1.0,current
+ma_baseline,MA baseline,classical,14,14,0,1.0,current
+moving_average_decomposition_block,Moving-average decomposition block,neural_ma_family,14,14,0,1.0,current
+nbeats_interpretable,N-BEATS interpretable,neural_learned_prior,14,14,0,1.0,current
+parsimony_block,Parsimony block,neural_decomposition,14,14,0,1.0,current
+ssa,SSA,classical,14,14,0,1.0,detime
+st_mtm_block,ST-MTM block,neural_decomposition,14,14,0,1.0,current
+stl,STL,classical,14,14,0,1.0,detime
+timekan_block,TimeKAN block,neural_wavelet_frequency,14,14,0,1.0,current
+times2d_block,Times2D block,neural_decomposition,14,14,0,1.0,current
+vmd,VMD,classical,14,14,0,1.0,detime
+waveform_block,WaveForM block,neural_wavelet_frequency,14,14,0,1.0,current
+wavelet,Wavelet,classical,14,14,0,1.0,detime
+waveletmixer_block,WaveletMixer block,neural_wavelet_frequency,14,14,0,1.0,current
+xpatch_block,xPatch block,neural_decomposition,14,14,0,1.0,current

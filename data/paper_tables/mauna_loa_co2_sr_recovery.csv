@@ -1,0 +1,5 @@
+method,trend_r2,seasonal_r2,seasonal_formula
+Direct PySR,1.000,0.000,none
+STL + PySR,1.000,0.897,sin(2*pi*t)
+CEEMDAN + PySR,1.000,0.897,sin(2*pi*t)
+VMD + PySR,1.000,0.989,sin(2*pi*t)

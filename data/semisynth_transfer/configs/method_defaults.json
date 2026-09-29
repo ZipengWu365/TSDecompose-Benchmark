@@ -1,0 +1,303 @@
+[
+  {
+    "method": "ssa",
+    "display_name": "SSA",
+    "family": "classical",
+    "actual_runtime_method": "ssa",
+    "backend_policy": "classical_parity_gated_detime",
+    "dependency_requirements": [],
+    "runtime_options": {
+      "speed_mode": "fast"
+    },
+    "config_template": {
+      "window": "4P",
+      "rank": 10
+    }
+  },
+  {
+    "method": "ceemdan",
+    "display_name": "CEEMDAN",
+    "family": "classical",
+    "actual_runtime_method": "ceemdan",
+    "backend_policy": "classical_parity_gated_detime",
+    "dependency_requirements": [],
+    "config_template": {
+      "trials": 50,
+      "noise_width": 0.1,
+      "primary_period": "P"
+    }
+  },
+  {
+    "method": "ma_baseline",
+    "display_name": "MA baseline",
+    "family": "classical",
+    "actual_runtime_method": "ma_baseline",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "trend_window": "2P",
+      "season_period": "P"
+    }
+  },
+  {
+    "method": "stl",
+    "display_name": "STL",
+    "family": "classical",
+    "actual_runtime_method": "stl",
+    "backend_policy": "classical_parity_gated_detime",
+    "dependency_requirements": [],
+    "config_template": {
+      "period": "P"
+    }
+  },
+  {
+    "method": "vmd",
+    "display_name": "VMD",
+    "family": "classical",
+    "actual_runtime_method": "vmd",
+    "backend_policy": "classical_parity_gated_detime",
+    "dependency_requirements": [],
+    "config_template": {
+      "K": 6,
+      "alpha": 1000,
+      "seasonal_num_modes": 1,
+      "init": 2,
+      "primary_period": "P"
+    }
+  },
+  {
+    "method": "wavelet",
+    "display_name": "Wavelet",
+    "family": "classical",
+    "actual_runtime_method": "wavelet",
+    "backend_policy": "classical_parity_gated_detime",
+    "dependency_requirements": [
+      "pywt"
+    ],
+    "config_template": {
+      "wavelet": "sym4",
+      "level": 4
+    }
+  },
+  {
+    "method": "autoformer_block",
+    "display_name": "Autoformer block",
+    "family": "neural_ma_family",
+    "actual_runtime_method": "autoformer_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "moving_avg": "2P"
+    }
+  },
+  {
+    "method": "dlinear_block",
+    "display_name": "DLinear block",
+    "family": "neural_ma_family",
+    "actual_runtime_method": "dlinear_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "moving_avg": "2P"
+    }
+  },
+  {
+    "method": "moving_average_decomposition_block",
+    "display_name": "Moving-average decomposition block",
+    "family": "neural_ma_family",
+    "actual_runtime_method": "moving_average_decomposition_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "moving_avg": "2P"
+    }
+  },
+  {
+    "method": "nbeats_interpretable",
+    "display_name": "N-BEATS interpretable",
+    "family": "neural_learned_prior",
+    "actual_runtime_method": "nbeats_interpretable",
+    "backend_policy": "current_only",
+    "dependency_requirements": [
+      "torch"
+    ],
+    "config_template": {
+      "degree_of_polynomial": 3,
+      "num_harmonics": 8,
+      "trend_blocks": 2,
+      "seasonality_blocks": 2,
+      "layers": 6,
+      "layer_size": 128,
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "xpatch_block",
+    "display_name": "xPatch block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "xpatch_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "trend_window": "2P",
+      "season_smooth": "P/2"
+    }
+  },
+  {
+    "method": "leddam_block",
+    "display_name": "LEDDAM block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "leddam_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "kernel_size": "2P",
+      "sigma": 1.0
+    }
+  },
+  {
+    "method": "inparformer_block",
+    "display_name": "InParformer block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "inparformer_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "trend_window": "2P",
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "delelstm_block",
+    "display_name": "DeLELSTM block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "delelstm_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "alpha": 0.2,
+      "beta": 0.1,
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "parsimony_block",
+    "display_name": "Parsimony block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "parsimony_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "trend_window": "P",
+      "num_harmonics": 1,
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "amd_block",
+    "display_name": "AMD block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "amd_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "multiscale_windows": [
+        "P",
+        "2P",
+        "4P"
+      ],
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "times2d_block",
+    "display_name": "Times2D block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "times2d_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "top_k_periods": 3,
+      "num_harmonics": 1,
+      "trend_window": "P",
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "st_mtm_block",
+    "display_name": "ST-MTM block",
+    "family": "neural_decomposition",
+    "actual_runtime_method": "st_mtm_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "trend_window": "P",
+      "season_smooth_window": "P/2",
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "waveform_block",
+    "display_name": "WaveForM block",
+    "family": "neural_wavelet_frequency",
+    "actual_runtime_method": "waveform_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [
+      "pywt"
+    ],
+    "config_template": {
+      "wavelet": "sym4",
+      "level": 4,
+      "season_levels": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "method": "waveletmixer_block",
+    "display_name": "WaveletMixer block",
+    "family": "neural_wavelet_frequency",
+    "actual_runtime_method": "waveletmixer_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [
+      "pywt"
+    ],
+    "config_template": {
+      "wavelet": "coif1",
+      "level": 4,
+      "season_levels": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "method": "freqmoe_block",
+    "display_name": "FreqMoE block",
+    "family": "neural_wavelet_frequency",
+    "actual_runtime_method": "freqmoe_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "num_bands": 2,
+      "expert_width": 64,
+      "fit_scope": "full"
+    }
+  },
+  {
+    "method": "timekan_block",
+    "display_name": "TimeKAN block",
+    "family": "neural_wavelet_frequency",
+    "actual_runtime_method": "timekan_block",
+    "backend_policy": "current_only",
+    "dependency_requirements": [],
+    "config_template": {
+      "num_bands": 2,
+      "kan_width": 32,
+      "trend_window": "P",
+      "fit_scope": "full"
+    }
+  }
+]

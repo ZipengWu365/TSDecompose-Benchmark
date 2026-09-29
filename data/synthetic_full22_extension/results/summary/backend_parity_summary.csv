@@ -1,0 +1,23 @@
+method,candidate_backend,status,backend_selected,mean_abs_metric_delta_max,mean_abs_rank_delta,notes
+amd_block,detime,current_only,current,,,method policy is current_only
+autoformer_block,detime,current_only,current,,,method policy is current_only
+ceemdan,detime,failed,current,0.23026123111268446,0.3,"delta=0.230261, rank_delta=0.300000"
+delelstm_block,detime,current_only,current,,,method policy is current_only
+dlinear_block,detime,current_only,current,,,method policy is current_only
+freqmoe_block,detime,current_only,current,,,method policy is current_only
+inparformer_block,detime,current_only,current,,,method policy is current_only
+leddam_block,detime,current_only,current,,,method policy is current_only
+ma_baseline,detime,current_only,current,,,method policy is current_only
+moving_average_decomposition_block,detime,current_only,current,,,method policy is current_only
+nbeats_interpretable,detime,current_only,current,,,method policy is current_only
+parsimony_block,detime,current_only,current,,,method policy is current_only
+ssa,detime,passed,detime,0.0,0.0,
+st_mtm_block,detime,current_only,current,,,method policy is current_only
+stl,detime,passed,detime,0.0,0.0,
+timekan_block,detime,current_only,current,,,method policy is current_only
+times2d_block,detime,current_only,current,,,method policy is current_only
+vmd,detime,passed,detime,0.0,0.0,
+waveform_block,detime,current_only,current,,,method policy is current_only
+wavelet,detime,passed,detime,0.0,0.0,
+waveletmixer_block,detime,current_only,current,,,method policy is current_only
+xpatch_block,detime,current_only,current,,,method policy is current_only

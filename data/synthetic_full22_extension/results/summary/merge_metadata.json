@@ -1,0 +1,7 @@
+{
+  "raw_files_found": 6,
+  "expected_full_rows": 6600,
+  "observed_rows": 6600,
+  "is_complete_full_run": true,
+  "allow_partial": false
+}

@@ -1,0 +1,7 @@
+method_family,stationary_trend_r2,stationary_seasonal_spectral_corr,nonstationary_trend_r2,nonstationary_seasonal_spectral_corr
+Smoothing (MA),0.571,0.938,-0.607,0.779
+LOESS (STL),0.965,0.98,0.247,0.973
+Subspace (SSA),0.929,0.876,0.195,0.987
+Sifting (EMD),0.936,0.867,0.119,0.964
+Spectral (VMD),0.077,0.185,-1.488,0.046
+Wavelet,0.838,0.94,-0.183,0.983

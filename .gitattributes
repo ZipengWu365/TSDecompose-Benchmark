@@ -1,0 +1,15 @@
+.gitattributes text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.sha256 text eol=lf
+
+# Preserve the exact bytes of the imported public release assets.
+code/** -text
+data/** -text
+site_data/** -text
+LICENSE -text
+CITATION.cff -text

@@ -1,0 +1,89 @@
+{
+  "protocol_id": "paper_core_component_recovery_50draw",
+  "paper_core_metric_count": 5,
+  "paper_table2_display_metric_count": 2,
+  "classic_view": "paper_global",
+  "calculation_unit": "Metrics are computed per generated draw after method outputs are aligned to (T_hat, S_hat, R_hat). The camera-ready core protocol uses 6 scenarios x 50 deterministic draws at length 512. Scenario and tier summaries report arithmetic means over the relevant valid rows. Coverage is the fraction of runs with successful outputs and valid metrics.",
+  "table2_aggregation": {
+    "stationary_regime": "Tiers 1-2",
+    "nonstationary_regime": "Tier 3",
+    "displayed_metrics": [
+      "metric_T_r2",
+      "metric_S_spectral_corr"
+    ],
+    "aggregation_rule": "Tier-balanced: compute method means separately for Tier 1, Tier 2, and Tier 3 over valid metric values. Stationary Table 2 columns are the equal-weight average of Tier 1 and Tier 2 means; non-stationary columns are Tier 3 means. Seasonal metrics are undefined for the trend-only scenario, so metric-specific valid-row counts are recorded in paper_core_50draw_by_tier.csv.",
+    "source_files": {
+      "raw_rows": "data/paper_tables/paper_core_50draw_leaderboard.csv",
+      "tier_means": "data/paper_tables/paper_core_50draw_by_tier.csv",
+      "display_table": "data/paper_tables/global_performance_summary.csv"
+    },
+    "note": "Table 2 displays two paper-core metrics split by stationary and non-stationary regimes; Figure 3 uses the five-metric capability profile."
+  },
+  "implementation_defaults": {
+    "dtw": "Squared-cost dynamic-programming DTW with square-rooted final accumulated cost.",
+    "seasonal_max_lag_window": [-10, 10],
+    "spectral_correlation": "Pearson correlation between normalized seasonal power spectra."
+  },
+  "metrics": [
+    {
+      "metric_id": "metric_T_r2",
+      "display_name": "Trend R2",
+      "component": "trend",
+      "direction": "higher",
+      "paper_role": "core metric; Table 2 display metric",
+      "formula": "1 - sum_t (T_t - T_hat_t)^2 / sum_t (T_t - mean(T))^2",
+      "description": "Scale-sensitive fit of the recovered trend against the ground-truth trend."
+    },
+    {
+      "metric_id": "metric_T_dtw",
+      "display_name": "Trend DTW",
+      "component": "trend",
+      "direction": "lower",
+      "paper_role": "core metric; Figure 3 profile axis",
+      "formula": "DTW(T, T_hat)",
+      "description": "Shape-sensitive trend distance under monotone time alignment."
+    },
+    {
+      "metric_id": "metric_S_r2",
+      "display_name": "Seasonal R2",
+      "component": "seasonal",
+      "direction": "higher",
+      "paper_role": "core metric; Figure 3 profile axis",
+      "formula": "1 - sum_t (S_t - S_hat_t)^2 / sum_t (S_t - mean(S))^2",
+      "description": "Scale-sensitive fit of the recovered seasonal component."
+    },
+    {
+      "metric_id": "metric_S_spectral_corr",
+      "display_name": "Seasonal spectral correlation",
+      "component": "seasonal",
+      "direction": "higher",
+      "paper_role": "core metric; Table 2 display metric",
+      "formula": "corr(P_S(f), P_S_hat(f))",
+      "description": "Pearson correlation between normalized power spectra, measuring frequency-content recovery."
+    },
+    {
+      "metric_id": "metric_S_maxlag_corr",
+      "display_name": "Seasonal max-lag correlation",
+      "component": "seasonal",
+      "direction": "higher",
+      "paper_role": "core metric; Figure 3 profile axis",
+      "formula": "max_{lag in L} corr(S_aligned(lag), S_hat_aligned(lag))",
+      "description": "Phase-robust seasonal similarity over a fixed lag search window."
+    }
+  ],
+  "column_aliases": {
+    "stationary_trend_r2": "tier-balanced metric_T_r2: equal-weight average of Tier 1 and Tier 2 means",
+    "stationary_seasonal_spectral_corr": "tier-balanced metric_S_spectral_corr: equal-weight average of Tier 1 and Tier 2 means",
+    "nonstationary_trend_r2": "metric_T_r2 mean for Tier 3",
+    "nonstationary_seasonal_spectral_corr": "metric_S_spectral_corr mean for Tier 3",
+    "metric_T_r2_mean": "metric_T_r2 arithmetic mean",
+    "metric_T_dtw_mean": "metric_T_dtw arithmetic mean",
+    "metric_S_r2_mean": "metric_S_r2 arithmetic mean",
+    "metric_S_spectral_corr_mean": "metric_S_spectral_corr arithmetic mean",
+    "metric_S_maxlag_corr_mean": "metric_S_maxlag_corr arithmetic mean"
+  },
+  "version_policy": {
+    "paper_core_50draw": "Must match the camera-ready paper tables and figures.",
+    "post_rebuttal_expansion": "May add methods, proxy diagnostics, and companion tracks, but must stay labelled as extension evidence."
+  }
+}

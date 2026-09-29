@@ -1,0 +1,5 @@
+setting,trend_r2,seasonal_r2,seasonal_covariance_error,shared_loading_correlation
+MSSA mean channel,0.989,0.970,0.035,0.999
+MSSA hardest C=32 drifting panel,0.991,1.000,,
+STL hardest C=32 drifting panel,0.755,0.963,,
+Single-sequence SSA hardest C=32 drifting panel,0.875,0.996,,

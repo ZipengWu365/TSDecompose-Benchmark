@@ -1,0 +1,8 @@
+[
+  {"scenario_id": "trend_only_linear", "tier": 1, "periods": [50], "mechanism": "pure linear trend"},
+  {"scenario_id": "trend_plus_single_sine", "tier": 1, "periods": [50], "mechanism": "quadratic trend plus single seasonal sine"},
+  {"scenario_id": "poly_trend_multi_harmonic", "tier": 2, "periods": [48], "mechanism": "polynomial trend plus multi-harmonic seasonality"},
+  {"scenario_id": "logistic_trend_multi_seasonal", "tier": 2, "periods": [24, 168], "mechanism": "logistic trend plus dual seasonal structure"},
+  {"scenario_id": "rw_trend_freq_drifting_cycle", "tier": 3, "periods": [50], "mechanism": "smooth random-walk trend plus drifting-frequency cycle"},
+  {"scenario_id": "piecewise_trend_regime_cycle_with_events", "tier": 3, "periods": [40, 65], "mechanism": "piecewise trend plus regime cycle plus event perturbations"}
+]

@@ -1,0 +1,53 @@
+{
+  "release_name": "TSDecompose-Benchmark",
+  "intended_huggingface_repo_type": "dataset",
+  "paper": {
+    "title": "Time-Series Decomposition as a Standalone Task: A Mechanism-Identifiable Benchmark",
+    "venue": "ICML 2026",
+    "camera_ready_local_pdf": "CameraReadyICML2026/paper/main.pdf"
+  },
+  "source_inputs": {
+    "code": [
+      "icml_submission_package/src/tsdecomp",
+      "icml_submission_package/src/synthetic_ts_bench"
+    ],
+    "paper_figures": [
+      "CameraReadyICML2026/paper/figs/selected_radar_charts.png"
+    ],
+    "synthetic_full22_extension": "experiments_20260406_full_benchmark_22methods_detime",
+    "real_proxy22": "experiments_20260406_real_datasets_hourly_22methods",
+    "semisynth_transfer": "experiments_20260406_semisynth_22methods_aligned",
+    "post_rebuttal_second_expansion": {
+      "real_physics_track_b": "rebuttal_experiments/results/core_full/node_5a1af4ce-ff20-46d8-8a76-07da6113961f/track_b_physics",
+      "real_proxy_track_c": "rebuttal_experiments/results/core_full/node_5a1af4ce-ff20-46d8-8a76-07da6113961f/track_c_proxy",
+      "summary_figure": "rebuttal_experiments/results/core_full/figures/real_data_main_panel.png"
+    },
+    "legacy_website_reference": "local legacy website data shape used only as a structural reference; not included"
+  },
+  "included_tracks": [
+    "paper_tables",
+    "paper_figures",
+    "synthetic_full22_extension",
+    "real_proxy22",
+    "semisynth_transfer",
+    "post_rebuttal_second_expansion",
+    "code/TSDecompose",
+    "site_data/v1.0.0"
+  ],
+  "excluded_material": [
+    "Large downloaded NetCDF/GZip source files under semisynthetic data/track_c/_downloads",
+    "Development-machine native extension binaries (*.pyd, *.so, *.dll, *.dylib)",
+    "Legacy website build outputs and submission-stage wording",
+    "LaTeX build intermediates"
+  ],
+  "alignment_notes": [
+    "data/paper_tables contains exact CSV versions of camera-ready manuscript tables plus paper_core_50draw_leaderboard.csv and paper_core_50draw_by_tier.csv for direct Table 2 reproduction.",
+    "metadata/paper_table_provenance.md records which paper tables are one-command rerunnable, which are exact summary-table snapshots, and which are later benchmark extensions.",
+    "data/paper_figures contains small paper figure assets for leaderboard visual alignment checks.",
+    "site_data/v1.0.0/evaluation_metrics.json records the five paper-core component-recovery metrics, the Table 2 display subset, and the tier-balanced Table 2 aggregation rule.",
+    "synthetic_full22_extension is a benchmark-only 22-method track using the same 6-scenario, 50-draw synthetic protocol where applicable; it should not replace the primary six-family Table 2 / Figure 3 interpretation.",
+    "real_proxy22 uses proxy diagnostics, not exact component recovery.",
+    "semisynth_transfer is a benchmark-only 22-method semi-synthetic transfer track; ranking_paper_5metric_overall.csv is the extension ranking source.",
+    "post_rebuttal_second_expansion is later rebuttal-stage companion evidence; it does not replace the paper-aligned tables."
+  ]
+}

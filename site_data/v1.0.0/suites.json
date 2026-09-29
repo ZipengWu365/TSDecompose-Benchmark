@@ -1,0 +1,27 @@
+[
+  {
+    "id": "paper_tables",
+    "name": "Paper Tables",
+    "description": "Exact CSV transcriptions of camera-ready main and appendix tables."
+  },
+  {
+    "id": "synthetic_full22_extension",
+    "name": "Synthetic Full22 Extension",
+    "description": "Benchmark-only 6-scenario, 50-draw synthetic extension with 22 method rows."
+  },
+  {
+    "id": "real_proxy22",
+    "name": "Real Proxy 22",
+    "description": "Real-data companion track with proxy and stability metrics."
+  },
+  {
+    "id": "semisynth_transfer",
+    "name": "Semi-Synthetic Transfer",
+    "description": "Known synthetic mechanisms injected into real monthly backgrounds."
+  },
+  {
+    "id": "post_rebuttal_second_expansion",
+    "name": "Post-Rebuttal Second Expansion",
+    "description": "Later real-data expansion with CO2/tides mechanism-aware checks and a six-dataset proxy panel."
+  }
+]

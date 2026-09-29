@@ -1,0 +1,7 @@
+method,mean_absolute_suite_score_delta
+VMD,1.097
+Wavelet,0.734
+SSA,0.311
+CEEMDAN,0.230
+STL,0.224
+MSTL,0.209

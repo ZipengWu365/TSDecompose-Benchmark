@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "TSDecompose Benchmark"
+message: "If you use this benchmark or source snapshot, please cite the ICML 2026 paper."
+type: software
+license: MIT
+authors:
+  - family-names: Wu
+    given-names: Zipeng
+  - family-names: Wei
+    given-names: Jiani
+  - family-names: Zhou
+    given-names: Shiqiao
+  - family-names: Chen
+    given-names: Jiajun
+  - family-names: Spill
+    given-names: Fabian
+  - family-names: Andrews
+    given-names: James W.
+preferred-citation:
+  type: conference-paper
+  title: "Time-Series Decomposition as a Standalone Task: A Mechanism-Identifiable Benchmark"
+  authors:
+    - family-names: Wu
+      given-names: Zipeng
+    - family-names: Wei
+      given-names: Jiani
+    - family-names: Zhou
+      given-names: Shiqiao
+    - family-names: Chen
+      given-names: Jiajun
+    - family-names: Spill
+      given-names: Fabian
+    - family-names: Andrews
+      given-names: James W.
+  collection-title: "Proceedings of the 43rd International Conference on Machine Learning"
+  year: 2026

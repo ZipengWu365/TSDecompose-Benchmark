@@ -1,0 +1,12 @@
+field,value
+mechanisms,3
+real_monthly_backgrounds,6
+background_scales,"0.5; 1.0"
+windows_per_setting,8
+series_length,480
+aggregate_order_best_to_worst,SSA > MA > STL > VMD > CEEMDAN > Wavelet
+ceemdan_mean_spectral_corr,0.769
+ceemdan_mean_maxlag_corr,0.704
+ceemdan_mean_seasonal_r2,-0.232
+ceemdan_seasonal_r2_scale_0_5,0.57-0.68
+ceemdan_seasonal_r2_scale_1_0,strongly negative across mechanisms

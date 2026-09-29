@@ -1,0 +1,47 @@
+{
+  "experiment_name": "experiments_20260406_real_datasets_hourly_22methods",
+  "suite_name": "real_dataset_companion_track",
+  "headline_claim": "A real-dataset companion track extending the paper's CO2 and tide case studies to a broader 22-method, hourly-refreshable decomposition registry.",
+  "registry_file": "configs/real_dataset_registry.csv",
+  "method_defaults_file": "configs/method_defaults.json",
+  "validated_backend_source": "experiments_20260406_full_benchmark_22methods_detime/results/summary/backend_parity_summary.csv",
+  "round_policy": {
+    "cadence": "hourly",
+    "default_save_components": true,
+    "run_status_prefixes": [
+      "ready"
+    ]
+  },
+  "proxy_metric_specs": [
+    {
+      "metric": "metric_season_period_power_ratio",
+      "ascending": false
+    },
+    {
+      "metric": "metric_season_harmonic_fit_r2",
+      "ascending": false
+    },
+    {
+      "metric": "metric_season_vs_resid_period_share",
+      "ascending": false
+    },
+    {
+      "metric": "metric_residual_lag1_abs",
+      "ascending": true
+    },
+    {
+      "metric": "metric_trend_smoothness_ratio",
+      "ascending": true
+    },
+    {
+      "metric": "metric_reconstruction_rmse",
+      "ascending": true
+    }
+  ],
+  "report_outputs": [
+    "results/summary/latest_round_overall_ranking.csv",
+    "results/summary/latest_round_by_dataset_ranking.csv",
+    "results/summary/latest_round_coverage_by_method.csv",
+    "results/summary/report.md"
+  ]
+}

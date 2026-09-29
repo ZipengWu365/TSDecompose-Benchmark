@@ -1,0 +1,227 @@
+{
+  "generated_at_utc": "2026-04-05T23:59:54+00:00",
+  "backend_map": {
+    "ssa": "detime",
+    "ceemdan": "current",
+    "ma_baseline": "current",
+    "stl": "detime",
+    "vmd": "detime",
+    "wavelet": "detime",
+    "autoformer_block": "current",
+    "dlinear_block": "current",
+    "moving_average_decomposition_block": "current",
+    "nbeats_interpretable": "current",
+    "xpatch_block": "current",
+    "leddam_block": "current",
+    "inparformer_block": "current",
+    "delelstm_block": "current",
+    "parsimony_block": "current",
+    "amd_block": "current",
+    "times2d_block": "current",
+    "st_mtm_block": "current",
+    "waveform_block": "current",
+    "waveletmixer_block": "current",
+    "freqmoe_block": "current",
+    "timekan_block": "current"
+  },
+  "summaries": [
+    {
+      "method": "ssa",
+      "candidate_backend": "detime",
+      "status": "passed",
+      "backend_selected": "detime",
+      "mean_abs_metric_delta_max": 0.0,
+      "mean_abs_rank_delta": 0.0,
+      "notes": ""
+    },
+    {
+      "method": "ceemdan",
+      "candidate_backend": "detime",
+      "status": "failed",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": 0.23026123111268446,
+      "mean_abs_rank_delta": 0.3,
+      "notes": "delta=0.230261, rank_delta=0.300000"
+    },
+    {
+      "method": "ma_baseline",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "stl",
+      "candidate_backend": "detime",
+      "status": "passed",
+      "backend_selected": "detime",
+      "mean_abs_metric_delta_max": 0.0,
+      "mean_abs_rank_delta": 0.0,
+      "notes": ""
+    },
+    {
+      "method": "vmd",
+      "candidate_backend": "detime",
+      "status": "passed",
+      "backend_selected": "detime",
+      "mean_abs_metric_delta_max": 0.0,
+      "mean_abs_rank_delta": 0.0,
+      "notes": ""
+    },
+    {
+      "method": "wavelet",
+      "candidate_backend": "detime",
+      "status": "passed",
+      "backend_selected": "detime",
+      "mean_abs_metric_delta_max": 0.0,
+      "mean_abs_rank_delta": 0.0,
+      "notes": ""
+    },
+    {
+      "method": "autoformer_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "dlinear_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "moving_average_decomposition_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "nbeats_interpretable",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "xpatch_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "leddam_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "inparformer_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "delelstm_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "parsimony_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "amd_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "times2d_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "st_mtm_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "waveform_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "waveletmixer_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "freqmoe_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    },
+    {
+      "method": "timekan_block",
+      "candidate_backend": "detime",
+      "status": "current_only",
+      "backend_selected": "current",
+      "mean_abs_metric_delta_max": NaN,
+      "mean_abs_rank_delta": NaN,
+      "notes": "method policy is current_only"
+    }
+  ]
+}
